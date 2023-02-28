@@ -1,0 +1,45 @@
+
+<%# <div class="h-auto bg-transparent border-2 border-blue-700"> %>
+  <div class="w-[95%] md:w-[90%] rounded-3xl max-w-[1200px] mt-10 m-auto lg:mt-16 bg-blue-700 shadow-2xl">
+    <%= image_tag("no-bg-elements/wall-labeled-nobg.png", alt: "reinforced concrete wall model illustration labeled", class: 'w-[90%] self-center m-auto lg:w-full max-w-[600px] 2xl:w-full 2xl:h-44 object-cover', id:"concrete-wall-image", :style => "") %>
+    
+    <div class="mt-10 bg-white dark:bg-gray-600 pb-6 shadow-2xl rounded-b-3xl">
+      <h2 class="text-center text-gray-800 dark:text-gray-300 text-lg md:text-xl lg:text-2xl font-bold pt-6"> Reinforced Concrete Retaining Wall Cost </h2>
+      <h4 class="text-center text-gray-300 text-md md:text-lg lg:text-xl font-bold pt-2">(With footer already poured)</h4>
+    
+        <h2 class="text-center text-gray-600 text-xl font-bold" style="z-index: 9;">solutions</h2>
+      <div class="w-5/6 h-[100px] m-auto relative">
+        <span class="bubble motion-safe:animate-floatX left-0 top-1 bg-gray-600 dark:bg-gray-200 dark:text-gray-600 text-gray-100">20,000 psi strength</span>
+        <br>
+        <span class="bubble motion-safe:animate-floatX bg-gray-500 top-1 left-[40%] text-gray-100">Highest quality materials</span>
+        <br>
+        <span class="bubble motion-safe:animate-floatX left-[unset] right-0 top-1 bg-gray-400 text-gray-100">Built to Last</span>
+        <p class="hidden text-center">You can now listen to millions of songs, audiobooks ands podcasts on any device anywhere you like!</p>
+      </div>
+      <div class="grid grid-cols-4 w-72 lg:w-3/6 m-auto bg-indigo-50 mt-5 p-4 lg:p-4 rounded-2xl ">
+        <div class="col-span-1">
+          <%= image_tag("icons/work-3d.png", alt: "work icon", class: 'w-15 lg:w-12', id:"concrete-wall-image", :style => "") %>
+        </div>
+        <div class="col-span-2 pt-1 ">
+          <p class="text-gray-800 font-bold text-sm md:text-md lg:text-lg">Starting From</p>
+          <p class="text-gray-500 text-xl md:text-2xl font-bold">$7.50 / ft²</p>
+        </div>
+        <div class="pt-2">
+          <a href="#see-more" class="text-indigo-700 underline hover:no-underline  text-sm hover:text-indigo-500 font-bold">See more</a>
+        </div>
+      </div>
+      <div class="bg-blue-700 w-72 lg:w-1/6 m-auto mt-6 md:mt-8 p-2 hover:bg-blue-500 rounded-2xl  text-white text-center shadow-xl shadow-bg-blue-700">
+        <%# <button class=""> %>
+         <%= link_to 'Schedule now', new_dashboard_url, class: 'lg:text-lg text-md font-bold' %>
+        <%# </button> %>
+      </div>
+      <div class="hidden text-center m-auto mt-6 w-full h-16">
+        <button class="hidden text-gray-500 font-bold lg:text-sm hover:text-gray-900">Cancel Order</button>
+      </div>
+    </div>
+  </div>
+<%# </div> %>
+
+<%# javascript_pack_tag 'cost-partial' %>
+
+

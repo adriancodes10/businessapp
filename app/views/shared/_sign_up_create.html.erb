@@ -1,0 +1,170 @@
+<div class="partial-card" style="">
+  <p class="partial-title">Create a project and an account in one step</p>
+    <%# <%= form_with(url: '/signup') do |f| %>
+  <%= form_with model: @sign_up_create, url: '/sign_up_create#create' do |f| %>
+    <%# puts '@sign_up_create' %>
+    <%# puts @sign_up_create%>
+  <%# @sign_up_create.errors.full_messages.first if @sign_up_create.errors.any? if @sign_up_create.errors? %>   
+    <% if @sign_up_create %>
+      <%# <p>devise/shared/error_messages </p> %>
+      <% if @sign_up_create.errors%>
+      <% render "devise/shared/error_messages", resource: @sign_up_create %>
+        <% if @sign_up_create.errors.any?%>
+        <%# <h2> %>
+        <%# Input errors: %>
+        <%# </h2> %>
+          <% @sign_up_create.errors.each do |error|%>
+            <%# <br> %>
+            <%# error.attribute %> 
+            <%# : <%= error.message %>  
+            <%# <br> %>
+            <%# <h3>error full message : </h3> %>
+          <%= error.full_message %> 
+          <br>
+          <%end%>
+          <h2>Check your inputs and try again. </h2>
+        <% end%>
+      <%end %>
+    <% end%>
+
+    <div class="field">
+      <%= f.label :email%>
+      <br>
+      <%= f.email_field :email, autofocus: false, placeholder: "email", autocomplete: "email", class: "mb-2" %>
+      <%= f.email_field  :email_confirmation, placeholder: 'confirm email', autocomplete: 'email' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, placeholder: "First name", autocomplete: "first name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, placeholder: "Last name", autocomplete: "last name" %>
+    </div>
+
+    <div class="field">
+    <%= f.label :phone_number %>
+      <%= f.text_field :phone_number, placeholder: "(XXX)-XXX-XXXX", autocomplete: "phone number" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length && @maximum_password_length %> 
+        <p>
+          <em>(<%= @minimum_password_length %> characters minimum; <%= @max_password_length %> characters maximum.)</em>
+        </p>
+      <% end %>
+      <br>
+      <%= f.password_field :password, class:"", placeholder:"password", autocomplete: "new-password", class: "mb-2" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"confirm password" %>
+    </div>
+
+    <div class="field form-group hidden">
+      <%= f.label :location, class:"label" %>
+      <%= f.text_field :location, class:"input" %>
+    </div>
+
+    <div class="field terms">
+      
+      <%= f.check_box :terms, class:"" %>
+      <%= f.label :terms, "I agree to the terms and conditions", class:"label" %>
+      <button type="button" id="modalButton"class="" data-toggle="modal" data-target="#termsModal" onClick="toggleModal()">
+        Read Terms and Conditions
+      </button>
+    </div>
+
+    <!-- Button trigger modal -->
+
+
+      <!-- Modal -->
+      <div class="modal-hidden" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">User Terms and Conditions</h5>
+              <button type="button" onClick="toggleModal()" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>The user assumes all responsibility and risk for the use of this website/webapp and the Internet generally. We accept no liability or responsibility to any person as a consequence of any reliance upon the information contained in this site. Under no circumstances, including negligence, shall anyone involved in creating or maintaining this web app/ website be liable for any direct, indirect, incidental, special or consequential damages, or loss profits that result from the use or inability to use the website/webapp and/or nay other websites which are linked to this site/app. Nor shall they be liable for any such damages including, but not limited to, reliance by a member or visitor on any information obtained via the website; or that result from mistakes, omissions, interruptions, deletion of files, viruses, errors, defects, or failure of performance, communications failure, theft, destruction or unauthorized access. States or Countries which do not allow some or all of the above limitations of liability, liability shall be limited to the greatest extend allowed by law. </p>
+            </div>
+            <div class="modal-footer">
+              <button onClick="toggleModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <%# <button type="button" class="btn btn-primary">Save changes</button> %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
+    <div class="field bg-info p-4">
+      <%= f.check_box :email_consent, checked: true %>
+      <%= f.label :I_consent_to_receive_email_messages %>
+    </div>
+
+    
+    <h3>Enter your project details below. </h3>   
+    <div class="field">
+      <%= f.label :street_number_and_name %>
+      <%= f.text_field :street_name, required: true, class: 'form-control' %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :project_location_city %>
+      <%= f.text_field  :city, required: true, class:'form-control', value: 'Hot Springs' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :project_location_state %>
+      <%= f.text_field  :state, required: true, class:'form-control', value: 'Arkansas' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :project_location_zip_code%>
+      <%= f.number_field :zip_code%>
+    </div>
+
+    <div class="field">
+      <%= f.label :length_in_feet %>
+      <%= f.number_field :length %>
+    </div>
+
+    <div class="field">
+      <%= f.label :average_height_in_feet %>
+      <%= f.number_field :height %>
+    </div>
+
+    <div class="field">
+      <%= f.label :average_width_in_inches %>
+      <%= f.number_field :width %>
+    </div>
+    <div class="field">
+    <%= f.label :desired_start_date%>
+    <i class="subtitle" > (Optional  in case you have a strict timeline.  ) </i>
+    <%= f.date_field  :desired_start_date%>
+    </div>
+
+   <div class="field">
+    <%= f.label :desired_completion_date%>
+    <i class="">(Optional) </i>
+    <%= f.date_field :desired_completion_date%>
+  </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field remember">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+    <%# submit_tag("Create user & project") %>
+    <div class="actions" style="" >
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %> 
+</div>
+<%= javascript_pack_tag 'terms-modal' %>
+
+
+

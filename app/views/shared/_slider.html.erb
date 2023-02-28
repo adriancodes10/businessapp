@@ -1,0 +1,508 @@
+
+ <div class="mt-32  container shadow-xl shadow-slate-800"> 
+            <div class="slider">
+
+                <div class="box1 box ">
+                    <div class="bg"></div>
+
+                     <div class="illustration "> <div class="inner"><%= image_tag("no-bg-elements/concrete-blocks.png",alt: "reinforced concrete wall" , class:"slide-image first", :style => "") %>
+                    </div>
+                    </div>
+
+                    <div class="details flex flex-col">
+                        <h2 class='text-center text-2xl md:text-3xl' style="">Reinforced Concrete Retaining Walls</h2>
+                        <p class="first slider-text text-center text-lg md:text-xl lg:text-2xl">
+                         1-4 weeks completion time 
+                         <br/>Poured in one day<br/>
+                          Low maintainance <br/>
+                          Fire & Water Resistant
+                           
+                        </p>
+                        <%= link_to 'Talk to a project manager', new_dashboard_url, class:'slider-button bg-blue-700' %>
+                    </div>
+
+                   
+                </div>
+                                
+                
+                <div class="box2 box">
+                    <div class="bg"></div>
+
+
+                    <div class="illustration"><div class="inner">
+                      <%= image_tag("no-bg-elements/rebar1-removebg.png",alt: "reinforced concrete wall" , class:"slide-image second", :style => "") %> 
+                     </div></div>
+
+                    <div class="details flex flex-col ">
+                        <h2 class="text-center text-2xl md:text-3xl">Reinforced For Performance</h2>
+                        <p class="slider-text text-center text-md md:text-xl lg:text-2xl">
+                          Steel Rebar Reinforcements
+                           <br/>
+                          ultimate flexural strength greater than block <br/>
+                          up to 30000 lbs of lateral resistance
+                        </p>
+                        <%= link_to 'Schedule a Project', new_dashboard_url, class:'slider-button bg-blue-700 ' %>
+                    </div>
+
+                </div>
+                                
+                <div class="box3 box">
+                    <div class="bg"></div>
+
+                    <div class="illustration">
+                      <div class="inner">
+                        <%= image_tag("no-bg-elements/tools-equipment-bags-removebg.png",alt: "finished poured concrete retaining wall" , class:"slide-image third", :style => "") %>
+                      </div>
+                    </div>
+
+                    <div class="details flex flex-col">
+                        <h2 class="featurette-heading text-center featurette text-2xl md:text-3xl">Top Engineering</h2>
+                        <p class="slider-text text-center text-md md:text-xl lg:text-2xl">
+                        20+ years of experience
+                        <br/>
+                        Safety focused 
+                        <br/>
+                        Increased efficiency
+                        <br/>
+                        Lower cost
+                        </p>
+                        <%= mail_to 'admin@seguraconstruction.com', "Email Us", class:' slider-button bg-blue-700' %>
+                    </div>
+
+                   
+                </div>
+                                
+                <div class="box4 box">
+                    <div class="bg"></div>
+
+                    <div class="illustration">
+                    <div class="inner">
+                      <%= image_tag("no-bg-elements/cgi-blue-forms-stack-set-no-bg.png",alt: "reinforced concrete wall" , class:"slide-image fourth", :style => "") %>  
+                      <%#= image_tag("no-bg-elements/cgi-red-forms-standing-nobg.png",alt: "reinforced concrete wall" , class:"hidden slide-image fourth", :style => "") %>  
+                    </div>
+                    </div>
+
+                    <div class="details flex flex-col">
+                        <h2 class="text-center text-2xl md:text-3xl">Built with pride</h2>
+                        <p class="text-center text-lg md:text-xl lg:text-2xl">
+                            Pride in our Service 
+                            <br/>
+                            Pride in our work
+                           <br/>
+                           Bonded + Insured 
+                           <br
+                           />
+                          Always American made materials
+                        </p>
+                         <%# link_to 'Call now', new_dashboard_url, class:'slider-button' %>
+                         <a href="" class="slider-button bg-blue-700 " >Call now </a>
+                    </div>
+
+                </div>
+                                
+                <%# <div class="box5 box hidden">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1>Rebar Reinforcement</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                            diam, ac mattis orci pellentesque eget. 
+                        </p>
+                        <button>Check Now</button>
+                    </div>
+
+                    <div class="illustration"><div class="inner">
+                     
+                    </div></div>
+                </div> %>
+                                
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
+           
+      </div>   
+      <div class="trail">
+              <div class="box1 active">1</div>
+              <div class="box2">2</div>
+              <div class="box3">3</div>
+              <div class="box4">4</div>
+              <%# <div class="box5 hidden">5</div> %>
+      </div>
+
+
+
+<style>
+.container {
+  /* margin-top: 4rem; */
+  box-sizing: border-box;
+  position: relative;
+  height: 80vh;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 5rem;
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    /* margin-top: 1rem; */
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    max-height: 800px;
+  }
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: all 0.25s ease-in;
+  transform: translateX(0);
+}
+@media only screen and (max-height: 450px) {
+  .slider {
+    height: 90vh;
+    min-height: 350px;
+  }
+}
+.slider .box {
+  border-radius: 5rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+}
+  /* .box1 {
+    @include color_render($b1cd, $b1cl);
+  }
+  .box2 {
+    @include color_render($b2cd, $b2cl);
+  }
+  .box3 {
+    @include color_render($b3cd, $b3cl);
+  }
+  .box4 {
+    @include color_render($b4cd, $b4cl);
+  }
+  .box5 {
+    @include color_render($b5cd, $b5cl);
+  } */
+
+@media only screen and (max-height: 450px) {
+  .slider .box {
+    height: 90%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .slider .box {
+    flex-direction: column;
+  }
+}
+.slider .box .bg {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 55%;
+  transform: skewX(7deg);
+  position: absolute;
+  height: 100%;
+  left: -10%;
+  padding-left: 20rem;
+  transform-origin: 0 100%;
+}
+@media only screen and (max-width: 800px) {
+  .slider .box .bg {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .slider .box .bg {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 54%;
+    transform: skewX(0deg);
+  }
+}
+.slider .box .bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: inherit;
+  pointer-events: none;
+  transform: skewX(10deg);
+}
+@media only screen and (max-height: 450px) {
+  .slider .box .bg::before {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .slider .box .bg::before {
+    width: 120%;
+    bottom: 0;
+    transform: skewX(0deg);
+  }
+}
+.slider .box .details {
+  z-index: 900;
+  height: 80%;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 2rem;
+  z-index: 100;
+}
+@media only screen and (max-width: 650px) {
+  .slider .box .details {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .slider .box .details {
+    padding-left: 2rem;
+  }
+}
+.slider .box .details h2 {
+  color: white;
+  font-weight: 500;
+  /* margin-bottom: 0.5rem; */
+}
+@media only screen and (max-height: 450px) {
+  .slider .box .details h2 {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    top: 0;
+  }
+}
+.slider .box .details p {
+  z-index: 802;
+  /* line-height: calc(13px + 2.1vw); */
+  /* font-size: clamp(12px, 0.4rem + 3.3333vw, 2rem); */
+  color: white;
+}
+@media only screen and (max-height: 450px) and (max-width: 900px) {
+  .slider .box .details p {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .slider .box .details p {
+    margin-right: 0;
+  }
+}
+.slider .box .details .slider-button {
+  display: block;
+  z-index: 99;
+  width: fit-content;
+  padding: 1rem 1rem;
+  color: 'gray';
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.slider .box .details .slider-button:hover {
+  opacity: 0.8;
+}
+.slider .box .details .slider-button:focus {
+  outline: none;
+  border: none;
+}
+.slider .illustration {
+  display: flex;
+  align-self: center;
+  width: 50%;
+  height: 70%;
+  justify-self: center;
+  margin: auto;
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 650px) {
+  .slider .illustration {
+    margin: unset;
+    margin-top: 1rem;
+    height: 45%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.slider .illustration div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+  z-index: 7;
+}
+@media only screen and (max-width: 650px) {
+  .slider .illustration div {
+    height: 90%;
+  }
+}
+.slider .illustration div .slide-image {
+  z-index: 999;
+}
+@media only screen and (max-height: 450px) {
+  .slider .illustration div .slide-image {
+    bottom: 0rem;
+    right: 1rem;
+  }
+}
+.slider .illustration div .slide-image.first {
+  overflow: visible;
+  position: relative;
+  height: unset;
+  width: 90%;
+  margin: auto;
+}
+@media only screen and (max-width: 650px) {
+  .slider .illustration div .slide-image.first {
+    width: 85%;
+    top: -20px;
+  }
+}
+.slider .illustration div .slide-image.second {
+  height: unset;
+  width: 100%;
+  height: auto;
+}
+.slider .illustration div .slide-image.third {
+  display: block;
+  height: auto;
+  width: 80%;
+}
+@media only screen and (max-width: 650px) {
+  .slider .illustration div .slide-image.third {
+    top: 0;
+    width: 70%;
+  }
+}
+.slider .illustration div .slide-image.fourth {
+  display: block;
+  position: relative;
+  height: unset;
+  width: 100%;
+  height: auto;
+}
+.slider .illustration div::after, .slider .illustration div::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.slider .illustration div::after {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+  transform: translate(-3rem, -2rem);
+}
+.slider .illustration div::before {
+  padding: 3rem 3rem;
+  transform: translate(0rem, -2rem);
+}
+
+.prev,
+.next {
+  z-index: 5;
+  position: absolute;
+}
+
+.prev,
+.next {
+  width: 4rem;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 650px) {
+  .prev,
+.next {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .prev,
+.next {
+    width: 2rem;
+    height: auto;
+  }
+}
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+
+.prev {
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+}
+
+.next {
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+}
+
+.trail {
+  position: static;
+  margin: auto;
+  margin-top: 1rem;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 650px) {
+  .trail {
+    bottom: 13%;
+  }
+}
+.trail div {
+  padding: 2rem;
+  border-top: 3px solid black;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+.trail div:hover {
+  opacity: 0.6;
+}
+@media only screen and (max-width: 650px) {
+  .trail div {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .trail div {
+    padding: 0.5rem;
+  }
+}
+
+.active {
+  opacity: 1 !important;
+}
+</style>

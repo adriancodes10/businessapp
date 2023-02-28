@@ -1,0 +1,251 @@
+
+<section class="gallery md:pl-[20%] lg:pl-[15%] flex flex-col pl-10 pr-10 bg-transparent text-white">
+  <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 flex flex-col items-center justify-center">
+    <div class="max-w-xl">
+      <h2 class="mt-5 mb-2 text-center text-lg md:text-xl lg:text-2xl font-bold">Project Gallery</h2>
+       <div id="fullpage" onclick="this.style.display='none';" class="z-10 h-full w-auto"></div>
+
+      <p class="mt-4 text-gray-300 text-center">
+        Projects at differents stages of completion.
+      </p>
+    </div>
+
+    <div
+      class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+      <div class="flex items-start gap-4">
+        <span class="hidden shrink-0 rounded-lg bg-gray-800 p-4">
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            <path
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            ></path>
+          </svg>
+        </span>
+
+        <div>
+          <h2 class="mt-5 mb-2 text-lg md:text-xl lg:text-2xl font-bold text-center" >Lake House Foundation Wall</h2>
+        <div style="" class="rounded-xl">
+            <%= image_tag('projects/wall-lake-straight.png', id:"toggle-fullscreen", class:"rounded-xl", alt: 'Lake Foundation wall')%>
+        </div>
+        <h4 class="text-center text-gray-200 mt-2">completed</h4>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="hidden shrink-0 rounded-lg bg-gray-800 p-4">
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            <path
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            ></path>
+          </svg>
+        </span>
+
+        <div>
+          <h2 class="mt-5 mb-2 text-lg md:text-xl lg:text-2xl font-bold text-center" style="">Rebar Reinforcement</h2>
+          <div style="" class="project-cont">
+            <%= image_tag('projects/retaining-wall-rebars.jpeg', id:"toggle-fullscreen", class:"rounded-xl", alt: 'Rebar Reinforcements inside set forms')%>
+          </div>
+           <h4 class="text-center text-gray-200 mt-2">Installing steel rebar reinforcements</h4>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="hidden shrink-0 rounded-lg bg-gray-800 p-4">
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            <path
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            ></path>
+          </svg>
+        </span>
+
+        <div>
+          <h2 class="mt-5 mb-2 text-lg md:text-xl lg:text-2xl font-bold text-center" >Project Basement Walls</h2>
+          <div style="" class="project-cont">
+            <%= image_tag('projects/retaining-wall-outside-tall.jpeg', id:"toggle-fullscreen", class:"rounded-xl",alt: 'Tall wall project')%>
+          </div>
+          <h4 class="text-center text-gray-200 mt-2">Installing inside forms before pouring</h4>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="hidden shrink-0 rounded-lg bg-gray-800 p-4">
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            <path
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            ></path>
+          </svg>
+        </span>
+
+        <div>
+          <h2 class="mt-5 mb-2 text-lg md:text-xl lg:text-2xl font-boldtext-center" >Project Featuring Tall Walls</h2>
+          <div style="" class="project-cont">
+            <%= image_tag('projects/retaining-wall-straight.jpeg', class:"rounded-xl",alt: 'Straight Retaining wall')%>
+             <h4 class="text-center mt-2 text-gray-200">14 ft height </h4>
+        </div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="hidden shrink-0 rounded-lg bg-gray-800 p-4">
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            <path
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            ></path>
+          </svg>
+        </span>
+
+        <div>
+          <h2 class="mt-5 mb-2 text-lg md:text-xl lg:text-2xl font-bold text-center">Poured Wall Corner</h2>
+          <div style="" class="project-cont">
+            <%= image_tag('projects/retaining-wall-corner-nobg.png', class:"rounded-xl",alt: 'Retaining Wall Corner Poured')%>
+          </div>
+           <h4 class="text-center mt-2 text-gray-200">Poured ready for stripping</h4>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="hidden shrink-0 rounded-lg bg-gray-800 p-4">
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            <path
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            ></path>
+          </svg>
+        </span>
+
+        <div>
+          <h2 class="mt-5 mb-2 text-lg md:text-xl lg:text-2xl font-bold text-center" >Curved Design</h2>
+          <div style="" class="project-cont">
+            <%= image_tag('projects/retaining-wall-curved.jpeg', id:"toggle-fullscreen", class:"rounded-xl",alt: 'Tall wall project')%>
+          </div>
+          <h4 class="text-center mt-2 text-gray-200">12 ft height </h4>
+        </div>
+      </div>
+    </div>
+    <span class="hidden mt-20 text-blue-500">
+    <%#= link_to home_videos_url %>
+    </span>
+  </div>
+</section>
+<script>
+const imgs = document.querySelectorAll(".gallery img");
+console.log(imgs);
+const fullPage = document.querySelector("#fullpage");
+console.log('fullPage', fullPage)
+imgs.forEach((img) => {
+  console.log('img', img)
+  img.addEventListener("click", function () {
+    console.log('img clicked', img)
+    fullPage.style.backgroundImage = "url(" + img.src + ")";
+    fullPage.style.display = "block";
+    fullPage.style.display = "static";
+  });
+});
+
+</script>
+<style>
+#fullpage {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+}
+.project-cont {
+  overflow-x: scroll;
+  /* min-height: 150px; */
+  /* min-width: 150px; */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* display: table-cell; */
+  vertical-align: middle;
+}
+.project-cont > img {
+  width: 100%;
+}
+</style>

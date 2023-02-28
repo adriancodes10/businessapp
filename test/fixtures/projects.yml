@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  street_name: MyString
+  city: MyString
+  state: MyString
+  height: 1
+  length: 1
+  width: 1
+  zip_code: 1
+  desired_start_date: 2023-02-23
+  desired_completion_date: 2023-02-23
+
+two:
+  street_name: MyString
+  city: MyString
+  state: MyString
+  height: 1
+  length: 1
+  width: 1
+  zip_code: 1
+  desired_start_date: 2023-02-23
+  desired_completion_date: 2023-02-23

@@ -1,0 +1,463 @@
+
+
+
+
+<div class="md:pl-[20%] lg:pl-[15%]  bg-gray-400 dark:bg-slate-900 pt-16 px-6 flex flex-col justify-center overflow-hidden">
+    <% if !user_signed_in? %>
+        <%# <span class="top-buttons position-absolute " style="z-index: 30;">  %>
+      <%# link_to 'Sign in', new_user_session_path %>
+
+      <%# <h4 class="hidden"> Create a free account first or log in to create a project and get an estimate</h4> %>
+      <%# render 'shared/sign_up_create'%>
+          <%= link_to 'Create Account', new_user_registration_path, class:"absolute left-15 top-5 
+          rounded-lg bg-gray-300 dark:bg-gray-400 text-gray-700 hover:text-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-500 dark:border-gray-500", 
+          style:"" 
+          %>
+
+          <%# </span> %>
+          <% else %>
+            <%# phone_number_link("(501) 777-2525") %>
+          
+      <% end %>
+      <%= link_to 'Careers', new_career_path, class:"absolute right-5 top-5 rounded-lg bg-gray-300 dark:bg-gray-400 text-gray-700 hover:text-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5 mr-2 mb-2 
+      hover:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-500 dark:border-gray-50", style:"" %>
+
+  <div class='flex justify-center mb-10'>
+
+    <a href="<%= root_path%>" class="m-auto" >
+      <%= image_tag("logo/logo-500x300.png", alt: "segura and company logo", class:"h-[200px] w-auto", id: "top-logo"
+    )%>
+      <%# image_tag("logo/logo-300x200.png", alt: "segura and company logo", class:"", id: "top-logo-mobile"
+    )%>
+
+    </a>    
+  </div> 
+  <%# <div class="col-12">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+  </g>
+    </svg>
+  </div> %>
+  <div class="
+    justify-center grid grid-cols-1 md:grid-cols-2 lg:h-[400px] overflow-hidden
+    md:mb-5" 
+    style=""
+    >
+    <div class=" relative z-10 flex flex-col grid-cols-1 align-center md:grid-cols-2 justify-center" style="margin: auto;">
+      <h1 class=" hidden"></h1>
+      <br>
+      <h1 class="hidden" data-controller="hello" data-action="click->hello#handleClick "></h1>
+      <h2  class="font-bold text-4xl bg-gradient-to-r from-slate-300 to-slate-700 bg-clip-text text-transparent text-center border-gray-900 w-[100%]" >
+        Commercial <span class="text-blue-600">+</span> Residential 
+      </h2>
+      <br>
+      <h1 class="font-bolder text-gray-100 dark:text-gray-200 text-3xl text-center mt-2"><span class=" text-red-700 font-bold">Poured</span> <span class="text-gray-500  font-bold">Concrete Foundation</span> <span class="text-gray-800  font-bold dark:text-blue-600">Retaining Walls</span>
+      </h1> 
+      <%= link_to 'Schedule a Project', new_dashboard_url, class:'animate-bounce1 self-center w-[12rem] text-center mt-10 mb-10 py-2 px-4 bg-blue-600 text-blue-300 font-semibold border border-white-500 rounded-lg hover:bg-blue-700 hover:text-blue-200 hover:border-white-700 transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0', style:'' %>
+    </div>
+    <div id='wall-img' class="h-[300px] md:h-[auto] mt-5 md:mt-3 flex justify-center overflow-clip" style="" >
+    <%= image_tag("no-bg-elements/wall-front-nobg.png", alt: "poured concrete retaining wall illustration", id: 'wall-img-png', class: 'absolute  overflow-hidden self-center md:w-[40%] lg:max-w-[450px]',:style => "") %>
+  </div>
+  </div>
+
+  
+  <%= render 'shared/featured' %>
+  
+  <%= render 'shared/cost' %>
+
+  <div class="col-12 row hidden border-element" style="height: 500px;">
+    <div class="col-md-6 
+      d-flex flex-column border-element">
+      <h1>Card Title </h1>
+      <p>This is a long paragraph. <br>this should break a line <br>this is the last and final sentence.
+      </p>
+      <button>Click me </button>
+    </div>
+    
+    <div class="col-md-6 d-flex flex-row border-element">
+      <h1>Card Title </h1>
+      <p>This is a long paragraph. <br>this should break a line <br>this is the last and final sentence.
+      </p>
+    </div>
+  </div>
+  
+
+
+  <div class="row wrapper hidden">
+    <div class=" card col-lg-4 card--19">
+      <div class="card__header card__header--19">
+        <div class="card__watermark" data-watermark="Air"></div>
+
+        <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
+
+        <span class="card__price card__will-animate">$120</span>
+
+        <h1 class="card__title card__will-animate">Air Structure 1</h1>
+        <span class="card__subtitle card__will-animate">From the Flymesh upper to the triple-density foam midsole, the Nike Air Zoom Structure 19 Men's Running Shoe offers plenty of support and the response you need for a smooth, stable ride that feels ultra fast.</span>
+
+        </div>
+
+      <div class="card__body">
+        
+        <img src="https://i.ibb.co/R0Y8T8r/nike19.png" alt="Nike 19" class="card__image card__will-animate">
+        <div class="card__wish-list card__wish-list--19 card__will-animate">Wish List</div>
+
+        <span class="card__category card__will-animate">Men's running shoe</span>
+      </div>
+    </div>
+
+    <!-- Nike Solstice -->
+    <div class="card col-lg-4 card--solstice">
+      <div class="card__header card__header--solstice">
+        <div class="card__watermark" data-watermark="Classic"></div>
+
+        <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
+
+        <span class="card__price card__will-animate">$129</span>
+
+        <h1 class="card__title card__will-animate">Air Solstice QS</h1>
+        <span class="card__subtitle card__will-animate">The Nike Air Solstice draws inspiration from the swoosh's classic running shoes of the 1980's updating the style with premium materials and impressive production quality.</span>
+
+      </div>
+
+      <div class="card__body">
+      
+        <img src="https://i.ibb.co/ZMVHp6x/nike-air-solstice.png" alt="Nike Solstice" class="card__image card__will-animate">
+        <div class="card__wish-list card__wish-list--solstice card__will-animate">Wish List</div>
+
+        <span class="card__category card__will-animate">Men's shoe</span>
+      </div>
+    </div>
+
+    <!-- Nike Huarache -->
+    <div class="card col-lg-4 card--huarache">
+      <div class="card__header card__header--huarache">
+        <div class="card__watermark" data-watermark="Safari"></div>
+
+        <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
+
+        <span class="card__price card__will-animate">$140</span>
+
+        <h1 class="card__title card__will-animate">Air Huarache Utility</h1>
+        <span class="card__subtitle card__will-animate">The Nike Air Huarache Utility Men's Shoe toughens up a famous running shoe with a nylon upper, fused mudguard and vibrant detail.</span>
+        
+      </div>
+      
+      <div class="card__body">
+      <img src="https://i.ibb.co/9bc3SYK/nike-safari.png" alt="Nike Huarache" class="card__image card__will-animate">
+        <a class="card__wish-list card__wish-list--solstice card__will-animate">Wish List</a>
+
+        <span class="card__category card__will-animate">Men's shoe</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-placeholder hidden">
+    <div class="cards-placeholder__item"></div>
+    <div class="cards-placeholder__item"></div>
+    <div class="cards-placeholder__item"></div>
+  </div>
+  <%= render 'shared/slider' %>
+  
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <%# javascript_pack_tag 'slider' %>
+  
+  <%# <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+      %>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script> -->
+
+
+
+    <div class="round-card first hidden" style="">
+    
+      <span class="text" style="">
+      <h3 class='card-title' style="">Reinforced Concrete Retaining Walls</h3>
+      <h5>Steel Rebar Reinforcement </h5>
+      <h5 class="card-subtitle">Has ultimate flexural strength greater than block  </h5>
+      <h5>up to 30000 lbs of lateral resistance</h5>
+      <h5 class="">1-4 weeks completion time depending on size</h5>
+      <h5>Poured in one day</h5>
+      <h5>Low maintainance </h5>
+      <h5>Fire & Water Resistant  </h5>
+      
+        <%= link_to 'Schedule a Project', new_dashboard_url, class:'card-button' %>
+      
+    
+    </span>
+  </div>
+  
+  <div class="w-[105%] md:w-[50%] max-w-[500px] self-center md:self-end my-10">   
+    <%= image_tag("no-bg-elements/framework-red-basement-front-top-nobg.png",alt: "formed walls foundation, basement, house" , class:"h-[20rem] m-auto relative z-4", :style => "") %>   
+    <div class="relative px-4 -mt-12 ">
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-2xl shadow-slate-900">
+        <div class="flex flex-col items-baseline text-center">
+          <span class="hidden bg-teal-200 text-teal-800 text-xs px-2 rounded-full  uppercase font-semibold tracking-wide">
+            New
+          </span>
+          <div class="ml-2 inline-block text-gray-600 uppercase text-xs font-semibold tracking-wider">
+        Foundation  &bull;  Basement Walls
+          </div>  
+          <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+          Parking Structure Walls  &bull;  Lake Seawalls &bull; & more
+          </div>  
+        </div>
+        
+        <h4 class="mt-4 text-xl text-center font-semibold uppercase leading-tight">Medium and Large Projects</h4>
+        <h5 class="mt-4 text-center font-semibold uppercase leading-tight">2-8 week completion time </h5>
+    
+      <div class="hidden mt-1">
+        $1800
+        <span class="text-gray-600 text-sm">   /wk</span>
+      </div>
+      <div class="mt-4 flex justify-center">
+          <%= link_to 'Project Gallery', home_gallery_url, class: 'card-button  bg-red-700 text-slate-200 rounded-md py-2 px-2'%>
+        <span class="hidden text-teal-600 text-md md:text-lg font-semibold">4/5 ratings </span>
+        <span class="hidden text-sm text-gray-600">(based on 234 ratings)</span>
+      </div>  
+      </div>
+    </div>
+  </div>
+  <div class="w-[105%] md:w-[50%] max-w-[500px] self-center md:self-start  my-10 md:-mt-32">   
+    <%= image_tag("no-bg-elements/cgi-blue-standing-nobg.png",alt: "formed walls foundation, basement, house" , class:"h-[20rem] m-auto relative z-[4]", :style => "") %>   
+    <div class="relative px-4 -mt-12">
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-2xl shadow-slate-900">
+        <div class="flex flex-col items-baseline text-center">
+          <span class="hidden bg-teal-200 text-teal-800 text-xs px-2 rounded-full  uppercase font-semibold tracking-wide">
+            New
+          </span>
+          <div class="ml-2 inline-block text-gray-600 uppercase text-xs font-semibold tracking-wider">
+        Full 2”x2” crossmember support angle  &bull; strongest steel
+          </div>  
+          <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+          100% sealed birch plywood &bull;  1,000 psf load-rated system 
+          </div>  
+        </div>
+        
+        <h4 class="mt-4 text-xl text-center font-semibold uppercase leading-tight">Concrete Steel Forms / Panels</h4>
+        <h4 class="mt-4 text-gray-400 text-lg text-center font-semibold uppercase leading-tight">Industry Leading Performance</h4>
+    
+      <div class="hidden mt-1">
+        $1800
+        <span class="text-gray-600 text-sm">   /wk</span>
+      </div>
+      <div class="mt-4 flex justify-center">
+          <%= link_to 'Video Gallery', home_videos_url, class:'card-button  bg-blue-700 text-slate-200 rounded-md py-2 px-2' %>
+          <%#= link_to 'Project Gallery', home_gallery_url, class: 'card-button  bg-red-700 text-slat-200 rounded-md py-2 px-2'%>
+        <span class="hidden text-teal-600 text-md md:text-lg font-semibold">4/5 ratings </span>
+        <span class="hidden text-sm text-gray-600">(based on 234 ratings)</span>
+      </div>  
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="hidden round-card third" style="" >
+        <%= image_tag("no-bg-elements/cgi-blue-standing-nobg.png",alt: "formed walls foundation, basement, house" , class:"formwork-image", :style => "") %>
+        
+        <span class="text" style="">
+      <h3 class='card-title' style="">Concrete Steel Forms / Panels</h3>
+      <h5 class="card-subtitle hidden">Industry Leading Performance </h5>
+      <h5>
+      Full 2”x2” crossmember support angle every foot for extra reinforcement.
+      </h5>
+      <h5>
+        1,000 psf load-rated system
+      </h5>
+        <h5>
+      100% sealed birch plywood face prevents moisture absorption</h5>
+      <h5>
+        stronger than fir plywood.
+      </h5>
+      <%# <h6>
+        Sealed Birch plywood face prevents moisture absorption, eliminates
+      grain transfer for a smooth finish after removal.
+      </h6> %>
+      <%= link_to 'Video Gallery', home_videos_url, class:'card-button' %>
+
+      <%# link_to 'Our Forms', home_about_url, class:'card-button' %>
+    </span>
+    
+  </div>
+
+
+    <% if user_signed_in? %> 
+      <div class="container-bs mt-5 mb-5 card px-4" >
+    <%# <!- Contact Form  %>
+      <%= render 'shared/project'%>
+  
+      </div> <!-- end of col -->
+    <% end %> 
+
+
+  <div class="flex justify-center">
+
+    <%# Retainging walls explained  %>
+    <%# <div class="mobile"> %>
+    <iframe class="rounded-2xl" width="90%" height="500" src="https://www.youtube.com/embed/UummY_mo85Y" title="YouTube video player" frameborder="0" allow=" encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    <%# </div> %>
+        <!-- end of row -->
+      <!-- end of container -->
+      <!-- end of form -->
+      <!-- end of contact -->
+
+  </div>
+
+</div> 
+      <%# end top container  %>
+<script>
+
+  var skinnyDevice = window.matchMedia("(max-width: 600px)");
+  var shortDevice = window.matchMedia("(max-height: 400px)");
+  var logoSrcDesktop = "modern-blue-logos/modern-logo-nobg/modern-logo-full-shortname-bg-nobg.png"
+
+  var logoSrcMobile = "modern-blue-logos/modern-logo-nobg/modern-logo-name-short-bg-nobg-250x200.png"
+  var responsiveLogo = skinnyDevice.matches? logoSrcMobile : logoSrcDesktop; 
+
+    // handleDeviceChange(smallDevice);
+    // load page image static, schroll till img is 30% from top.
+    // cat 30% get img position from top and right 
+    // change position to fixed and set position.
+    // at scroll 400 change background img. 
+    // at 800 change to static and set position. 
+    
+  var imgEl = document.getElementById("wall-img-png");
+      //  imgEl.style.width = '370px';
+      // imgEl.style.height = 'auto';
+
+  var imgCont = document.getElementById("wall-img");
+  console.log(imgCont)
+  console.log('imgCont logged');
+
+
+  var imgContParent = imgCont.parentNode;
+  console.log(imgContParent);    
+
+    var imgWallCross = '<%= asset_path 'no-bg-elements/wall-cross-section-nobg.png' %>';
+
+  var imgWallFront = '<%= asset_path 'no-bg-elements/wall-front-nobg.png' %>';
+
+
+  // var imgWallFrontFull = '<%= asset_path 'no-bg-elements/wall-front-full-nobg.png' %>';
+
+  // var imgWallAngleFront = '<%= asset_path 'no-bg-elements/wall-front-angle-nobg.png' %>';
+
+  // var imgWallLabeled = '<%= asset_path 'no-bg-elements/wall-labeled-nobg.png' %>';
+
+
+  // var imgWallSide = '<%= asset_path 'no-bg-elements/wall-side-nobg.png' %>';
+
+  // var imgWallSideTop = '<%= asset_path 'no-bg-elements/wall-side-top-nobg.png' %>';
+
+  // var imgWallBackDirtLeft = '<%= asset_path 'no-bg-elements/wall-rear-left-dirt-nobg.png' %>';
+
+  var imgWallBackDirtRight ='<%= asset_path 'no-bg-elements/wall-rear-right-dirt-nobg.png' %>';
+
+  var imgWallBackRight = 
+  '<%= asset_path 'no-bg-elements/wall-rear-right-nobg.png'%>';
+
+
+  //   n 3.1 you just get rid of the 'images' part of the path. So an image that lives in /assets/images/example.png will actually be accessible in a get request at this url - /assets/example.png
+
+  // Because the assets/images folder gets generated along with a new 3.1 app, this is the convention that they probably want you to follow. I think that's where image_tag will look for it, but I haven't tested that yet.
+  //You'll want to change the extension of your css file from .css.scss to .css.scss.erb and do:
+
+  // background-image:url(<%=asset_path "no-bg-elements/wall-side-nobg.png"%>);
+  // You may need to do a "hard refresh" to see changes. CMD+SHIFT+R on OSX browsers.
+
+  // In production, make sure
+
+  // rm -rf public/assets    
+  // bundle exec rake assets:precompile RAILS_ENV=production
+  // happens upon deployment.
+
+  // Share
+  // Improve this answer
+
+
+  function getElPos() {
+    var contPos = imgCont.getBoundingClientRect();
+    return contPos
+    }
+  window.onscroll = function()  {
+    stickyScroll()
+    };
+
+  var changedImage = false; 
+  var flippedImage = false;
+
+  function stickyScroll() {
+
+    var {x, y, top, right, bottom, left, width, height  } = getElPos();
+    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    // var elContY = imgCont.offsetTop;
+    console.log('scrollTop');
+    console.log(scrollTop)
+    console.log('logged scrollTop');
+    
+    if ( skinnyDevice.matches? scrollTop < 50 : scrollTop < 50 ) {
+      console.log('scrollTop > 50');
+      // imgCont.style.position = 'static';
+      console.log(changedImage);
+      // if (changedImage == true) {
+      //   console.log('changing image below-----------');
+      //   console.log(changedImage)
+      //   imgEl.src = imgWallCross;
+      //   changedImage = false; 
+      //   console.log(changedImage)
+      //   setTimeout(function(){
+      //     imgEl.classList.remove('flipped');
+      //     flippedImage = false;
+      //   }, 1000);  
+      // }
+    }
+    
+    if ( skinnyDevice.matches? scrollTop > 100 : scrollTop > 80 ){
+      console.log(x, y);
+      console.log(width, height);
+      console.log('scrollTop > 100');
+      //  imgEl.style.width = '370px';
+      imgEl.src = imgWallFront;
+      
+
+    }
+    if (skinnyDevice.matches? scrollTop > 200 : scrollTop > 120){
+      console.log('psition > 200/150');
+      //  imgEl.style.width = 'auto';
+      imgEl.src = imgWallCross;
+          // changedImage = true;
+      console.log(imgEl.src);
+    }
+    if (skinnyDevice.matches? scrollTop > 300 : scrollTop > 280 ) {
+      // if (flippedImage && !imgEl.classList.contains('flipped')) {
+      //   imgEl.classList.add('flipped');
+      // }
+      console.log('scrollposition > 300/200') ;
+      imgEl.src = imgWallBackDirtRight;
+      console.log(imgEl.src);
+    }
+    if (skinnyDevice.matches? scrollTop > 350 : scrollTop > 270) {
+    console.log('changing position to static after 350/250 scrolltop')
+        // if (imgEl.classList.contains('flipped')) {
+        //   imgEl.classList.remove('flipped');
+        // }
+
+        // imgEl.src = imgWallLabeled;
+      
+        // console.log(imgEl.src);
+    }
+    if (skinnyDevice.matches? scrollTop > 400 : scrollTop > 320) {
+        imgEl.src = imgWallBackRight;
+      // flippedImage = true;
+
+    }
+  }
+</script>

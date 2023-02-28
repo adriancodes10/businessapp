@@ -1,0 +1,81 @@
+<%# 
+to do 
+create admin user
+create admin dashboard.
+show users 
+show projects sort by date created,
+sort by 
+
+ %>
+ <%# alterante header for form %>
+<%# form_with(model:[ @user, project], local: true) do |f| %>
+
+<h5>Add a project using this project form </h5>
+<h4 class="hidden">Create a project </h4>
+<%= form_with(model: @project, url: dashboard_index_path) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being created</h2>
+
+      <ul>
+        <% @project.errors.each do |error|%>
+          <li><%= error.full_message %></li>
+        <%end%>
+      </ul>
+    </div>
+  <%end%>
+  <div class="field">
+    <%= f.label :street_number_and_name,style:"font-size: large;" %>
+    <%= f.text_field :street_name, required: true, class: '' %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :project_location_city,style:"font-size: large;" %>
+    <%= f.text_field  :city, required: true, class:'', value: 'Hot Springs' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project_location_state,style:"font-size: large;" %>
+    <%= f.text_field  :state, required: true, class:'', value: 'Arkansas' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project_location_zip_code,style:"font-size: large;" %>
+    <%= f.number_field :zip_code, value:'71901' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :length_of_retaining_wall,style:"font-size: large;" %>
+    <i class="" >(in Feet) </i>
+    <%= f.number_field :length%>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_height_in_feet,style:"font-size: large;" %>
+    <%= f.number_field  :height%>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_width_in_inches,style:"font-size: large;" %>
+    <i class="" >(ususally 12 inches wide) </i>
+    <%= f.number_field  :width%>
+  </div>
+  <div class="field">
+    <%= f.label :desired_start_date,style:"font-size: large;" %>    
+    <i class="" >(Optional) </i>
+    <%= f.date_field  :desired_start_date%>
+  </div>
+   <div class="field">
+    <%= f.label :desired_completion_date,style:"font-size: large;" %>
+    
+    <i >(Optional) </i>
+    <%= f.date_field :desired_completion_date%>
+  </div>
+  <div class="actions">
+   <%# <div class="input_box button"> %>
+    <%= f.submit "Create Project",style:"color: gainsboro;" %>
+    <%# </div> %>
+  </div>
+  <%end%>
+
+

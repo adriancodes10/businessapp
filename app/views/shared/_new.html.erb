@@ -1,0 +1,104 @@
+
+<div>
+<h2>Sign Up</h2>
+<%# <form name="users"> %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+   <%# <%= devise_error_messages! %>
+  <%# <div class="input_box info"> %>
+  <div class="field">
+    <% f.label :email %>
+    <%= f.email_field :email, class:"", autofocus: true, autocomplete: "email", placeholder:"email" %>
+  </div>
+
+  <div class="field">
+    <% f.label :first_name %>
+    <%= f.text_field :first_name, class:"", placeholder:"first name", autofocus: true %>
+  </div>
+   <div class="field">
+    <% f.label :last_name %><br />
+    <%= f.text_field :last_name, class:"", placeholder:"last name", autofocus: true %>
+  </div>
+ <div class="field">
+    <% f.label :phone_number %><br />
+    <%= f.text_field :phone_number, class:"", placeholder:"(XXX) XXX-XXXX", autofocus: true %>
+  </div>
+  
+  <div class="field">
+    <% f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, class:"", placeholder:"password", autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <% f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"confirm password" %>
+  </div>
+ 
+
+  <div class="field form-group hidden">
+    <%= f.label :location, class:"label" %>
+    <%= f.text_field :location, class:"input" %>
+  </div>
+    <div class="field terms">
+    
+     
+      <%= f.check_box :terms, class:"" %>
+      <%= f.label :terms, "I agree to the terms and conditions", class:"label" %>
+      <button type="button" id="modalButton"class="" data-toggle="modal" data-target="#termsModal" onClick="toggleModal()">
+        Read Terms and Conditions
+      </button>
+    </div>
+
+        <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <div class="modal-hidden" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">User Terms and Conditions</h5>
+              <button type="button" onClick="toggleModal()" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>The user assumes all responsibility and risk for the use of this website/webapp and the Internet generally. We accept no liability or responsibility to any person as a consequence of any reliance upon the information contained in this site. Under no circumstances, including negligence, shall anyone involved in creating or maintaining this web app/ website be liable for any direct, indirect, incidental, special or consequential damages, or loss profits that result from the use or inability to use the website/webapp and/or nay other websites which are linked to this site/app. Nor shall they be liable for any such damages including, but not limited to, reliance by a member or visitor on any information obtained via the website; or that result from mistakes, omissions, interruptions, deletion of files, viruses, errors, defects, or failure of performance, communications failure, theft, destruction or unauthorized access. States or Countries which do not allow some or all of the above limitations of liability, liability shall be limited to the greatest extend allowed by law. </p>
+            </div>
+            <div class="modal-footer">
+              <button onClick="toggleModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <%# <button type="button" class="btn btn-primary">Save changes</button> %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
+
+    <div class="field bg-info p-4">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, :checked => true %>
+    </div>
+
+    <div class="field bg-info p-4">
+      <%= f.check_box :email_consent, checked: 'true' %>
+      <%= f.label :I_consent_to_receive_email_messages %>
+    </div>
+
+
+  <div class="actions">
+  <div class="input_box button">
+
+
+    <%= f.submit "Submit", class:"btn btn-join" %>
+  
+  </div>
+
+  </div>
+<% end %>
+<%= javascript_pack_tag 'terms-modal' %>
+
+<%# <%= render "devise/shared/links" %> 
+<%# </form> %>
+</div>
