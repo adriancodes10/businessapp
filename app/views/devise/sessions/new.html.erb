@@ -1,6 +1,6 @@
 
 
-<section class="w-full md:pl-[20%] lg:pl-[15%] px-8 py-16 bg-gray-100 dark:bg-slate-900 xl:px-8">
+<section class="w-full md:pl-[20%] lg:pl-[15%] px-8 py-16 bg-gray-400 dark:bg-slate-900 xl:px-8">
     <div class="max-w-5xl mx-auto">
      <li class="hidden flex-1 mb-10 ">
             <%= link_to root_path do %>
@@ -15,29 +15,29 @@
                 <h2 class="text-2xl font-extrabold leading-none text-gray-200 sm:text-3xl md:text-5xl">
                     Your project is waiting.
                 </h2>
-                <p class="text-xl text-gray-400 md:pr-16">Update project details.Check your project status. Make a payment.</p>
+                <p class="text-xl text-gray-300 dark:text-gray-200 md:pr-16">Update project details.Check your project status. Make a payment.</p>
             </div>
 
             <div class="w-full mt-16 md:mt-0 md:w-2/5">
-                <div class="relative z-[2] rounded-xl h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 shadow-2xl px-7">
+                <div class="relative z-[2] rounded-xl h-auto p-8 py-10 overflow-hidden bg-gray-600 shadow-2xl shadow-gray-800 px-7">
                
 
                     <h3 class="mb-6 text-2xl font-medium text-center text-gray-400">Sign in to your Account</h3>
                       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                       <div class="field">
-                      <%= f.label :email %><br />
-                      <%= f.email_field :email, autofocus: true, class:"block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl", autocomplete: "email", placeholder: 'Email address' %>
+                      <%#= f.label :email, class:"text-slate-200 dark:text-slate-600" %><br />
+                      <%= f.email_field :email, autofocus: true, class:"text-gray-900 block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl", autocomplete: "email", placeholder: 'Email address' %>
                     </div>
 
                     <div class="field">
-                      <%= f.label :password %><br />
-                      <%= f.password_field :password, autocomplete: "current-password", class:"block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl", placeholder: "Password"%>
+                      <%#= f.label :password, class:"text-slate-200 dark:text-slate-600" %><br />
+                      <%= f.password_field :password, autocomplete: "current-password", class:"text-gray-900 block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl", placeholder: "Password"%>
                     </div>
 
                     <% if devise_mapping.rememberable? %>
                       <div class="field mb-10 m-auto table">
                         <%= f.check_box :remember_me, class:"" %>
-                        <%= f.label :remember_me, class: 'ml-5' %>
+                        <%= f.label :remember_me, class: 'ml-5 text-slate-200 dark:text-slate-600' %>
                       </div>
                     <% end %>
 

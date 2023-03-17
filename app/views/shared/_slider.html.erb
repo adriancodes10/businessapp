@@ -18,7 +18,7 @@
                           Fire & Water Resistant
                            
                         </p>
-                        <%= link_to 'Talk to a project manager', new_dashboard_url, class:'slider-button bg-blue-700' %>
+                        <%= link_to 'Talk to a project manager', new_dashboard_url, class:'slider-button bg-blue-700 text-gray-200 dark:text-gray-700' %>
                     </div>
 
                    
@@ -41,7 +41,7 @@
                           ultimate flexural strength greater than block <br/>
                           up to 30000 lbs of lateral resistance
                         </p>
-                        <%= link_to 'Schedule a Project', new_dashboard_url, class:'slider-button bg-blue-700 ' %>
+                        <%= link_to 'Schedule a Project', new_dashboard_url, class:'slider-button bg-blue-700 text-gray-200 dark:text-gray-700 ' %>
                     </div>
 
                 </div>
@@ -66,7 +66,7 @@
                         <br/>
                         Lower cost
                         </p>
-                        <%= mail_to 'admin@seguraconstruction.com', "Email Us", class:' slider-button bg-blue-700' %>
+                        <%= mail_to 'admin@seguraconstruction.com', "Email Us", class:' slider-button bg-blue-700 text-gray-200 dark:text-gray-700' %>
                     </div>
 
                    
@@ -95,7 +95,7 @@
                           Always American made materials
                         </p>
                          <%# link_to 'Call now', new_dashboard_url, class:'slider-button' %>
-                         <a href="" class="slider-button bg-blue-700 " >Call now </a>
+                         <a href="" class="slider-button bg-blue-700 text-gray-200 dark:text-gray-700" >Call now </a>
                     </div>
 
                 </div>
@@ -129,7 +129,11 @@
               <div class="box3">3</div>
               <div class="box4">4</div>
               <%# <div class="box5 hidden">5</div> %>
+
       </div>
+      <% content_for :head do %>
+        <%= javascript_import_module_tag "custom/slider" %>
+      <% end %>
 
 
 

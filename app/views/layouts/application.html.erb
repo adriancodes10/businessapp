@@ -48,10 +48,11 @@
     <%= javascript_importmap_tags %>
 
     <%= favicon_link_tag asset_path('favicon.ico')%>
+    <%= yield :head %>
     
   </head>
 
-  <body class="bg-gray-700 dark:bg-slate-900 font-sans leading-normal tracking-normal text-gray-700 dark:text-gray-300">
+  <body class="bg-gray-400 dark:bg-slate-900 font-sans leading-normal tracking-normal text-gray-700 dark:text-gray-300">
     <%# <main class="flex md:flex-row-reverse flex-wrap"> %>
       <%= render 'shared/sidenav' %>
       <% if flash[:alert] -%>

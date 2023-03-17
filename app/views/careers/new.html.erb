@@ -1,106 +1,102 @@
 
+<div class="md:pl-[20%] lg:pl-[15%] pt-16 px-6 flex flex-col items-center justify-center overflow-hidden top-cont container-fluid py-5">
+  <div class="w-full space-y-5 md:w-3/5 md:pr-16 text-center">
+    <p class="font-medium text-xl text-blue-500 uppercase">Current Positions</p>
+    <h2 class="text-xl font-extrabold leading-none text-gray-200 sm:text-2xl md:text-3xl">
+      Crew member Construction/Landscaping
+    </h2>
+    <p class="text-xl text-gray-300 dark:text-gray-200 md:pr-16"><span class="subtitle">location: </span>Hot Springs</p>
+  </div>
+  <div class="wrapper">
+    <div class="card card--19">
+      <div class="card__header card__header--19">
+        <div class="card__watermark" data-watermark="Team"></div>
 
-<div class="top-cont container-fluid py-5">
-     
-                <h2 class="m-auto d-block">Current Positions</h2>
-        <br>
-        <h3 class="m-auto d-block">Crew member Construction/Landscaping</h3><br>
-        <h4 class="m-auto d-block"><span class="subtitle">location: </span>Hot Springs</h4>
-      <div class="wrapper">
+        <img src="<%= asset_path 'favicon.ico' %>" alt="Nike" class="card__logo card__will-animate">
 
-        <div class="card card--19">
-          <div class="card__header card__header--19">
-            <div class="card__watermark" data-watermark="Team"></div>
+        <span class="card__price card__will-animate">$10-$14</span>
 
-            <img src="<%= asset_path 'favicon.ico' %>" alt="Nike" class="card__logo card__will-animate">
+        <h1 class="card__title card__will-animate">Part time </h1>
+        <span class="card__subtitle card__will-animate">
+          <table>
+          <tr><td>Learn on the job</td></tr>
+          <tr><td> 8- 30 hours/week </td></tr>
+          <tr><td>Flexible schedule</td></tr>
+          </table>
+        </span>
 
-            <span class="card__price card__will-animate">$10-$14</span>
-
-            <h1 class="card__title card__will-animate">Part time </h1>
-            <span class="card__subtitle card__will-animate">
-              <table>
-              <tr><td>Learn on the job</td></tr>
-              <tr><td> 8- 30 hours/week </td></tr>
-              <tr><td>Flexible schedule</td></tr>
-              </table>
-            </span>
-
-            </div>
-
-          <div class="card__body">
-            
-            <img src="<%= asset_path 'no-bg-elements/sign-men-working-nobg.png' %>" alt="Workers" class="card__image apply-image-1 card__will-animate">
-            <div class="card__wish-list card__wish-list--19 card__will-animate" data-position="part-time" onclick="toggleForm(this.getAttribute('data-position'))" >Apply</div>
-
-            <span class="card__category card__will-animate hidden">Men's running shoe</span>
-          </div>
         </div>
 
-        <!-- Nike Solstice -->
-        <div class="card card--solstice">
-          <div class="card__header card__header--solstice">
-            <div class="card__watermark" data-watermark="Work"></div>
+      <div class="card__body">
+        
+        <img src="<%= asset_path 'no-bg-elements/sign-men-working-nobg.png' %>" alt="Workers" class="card__image apply-image-1 card__will-animate">
+        <div class="card__wish-list card__wish-list--19 card__will-animate" data-position="part-time" onclick="toggleForm(this.getAttribute('data-position'))">Apply</div>
 
-            <img src="<%= asset_path 'favicon.ico' %>" alt="Nike" class="card__logo card__will-animate">
+       
+      </div>
+    </div>
 
-            <span class="card__price card__will-animate">$12-16$</span>
+    <!-- Nike Solstice -->
+    <div class="card card--solstice">
+      <div class="card__header card__header--solstice">
+        <div class="card__watermark" data-watermark="Work"></div>
 
-            <h1 class="card__title card__will-animate">full-time position</h1>
-            <span class="card__subtitle card__will-animate">
-              <table>
-              <tr><td>Consistent and regular work schedule</td></tr>
-              <tr><td>Custom Work Gear</td></tr>
-              <tr><td>Start working immediately</td></tr>
-              </table>
-            </span>
+        <img src="<%= asset_path 'favicon.ico' %>" alt="Nike" class="card__logo card__will-animate">
 
-          </div>
+        <span class="card__price card__will-animate">$12-16$</span>
 
-          <div class="card__body">
-          
-            <img src="<%= asset_path 'no-bg-elements/worker-jackhammer-nobg.png' %>" alt="Nike Solstice" class="card__image apply-image-2 card__will-animate">
-            <div class="card__wish-list card__wish-list--solstice card__will-animate" data-position="full-time" onclick="toggleForm(this.getAttribute('data-position'))" >get started</div>
+        <h1 class="card__title card__will-animate">full-time position</h1>
+        <span class="card__subtitle card__will-animate">
+          <table>
+          <tr><td>Consistent and regular work schedule</td></tr>
+          <tr><td>Custom Work Gear</td></tr>
+          <tr><td>Start working immediately</td></tr>
+          </table>
+        </span>
 
-            <span class="card__category card__will-animate hidden">Men's shoe</span>
-          </div>
-        </div>
-
-        <!-- Nike Huarache -->
-        <div class="card card--huarache">
-          <div class="card__header card__header--huarache">
-            <div class="card__watermark" data-watermark="$$$"></div>
-
-            <img src="<%= asset_path 'favicon.ico' %>" alt="Nike" class="card__logo card__will-animate">
-
-            <span class="card__price card__will-animate">$10-$13</span>
-
-            <h1 class="card__title card__will-animate">summer/winter seasonal position</h1>
-            <span class="card__subtitle card__will-animate">
-              <table>
-              <tr><td>Weekly Pay</td></tr>
-              <tr><td>Great for students</td></tr>
-              <tr><td>Work summer or winter schedule</td></tr>
-              </table>
-            </span>
-            
-          </div>
-          
-          <div class="card__body">
-          <img src="<%= asset_path 'no-bg-elements/tools-removebg.png' %>" alt="Nike Huarache" class="card__image apply-image-3 card__will-animate">
-            <a class="card__wish-list card__wish-list--solstice card__will-animate " data-position="seasonal" onclick="toggleForm(this.getAttribute('data-position'))">Apply</a>
-
-            <span class="card__category card__will-animate hidden">Men's shoe</span>
-          </div>
-        </div>
       </div>
 
-      <div class="cards-placeholder ">
-        <div class="cards-placeholder__item"></div>
-        <div class="cards-placeholder__item"></div>
-        <div class="cards-placeholder__item"></div>
+      <div class="card__body">
+      
+        <img src="<%= asset_path 'no-bg-elements/worker-jackhammer-nobg.png' %>" alt="Nike Solstice" class="card__image apply-image-2 card__will-animate">
+        <div class="card__wish-list card__wish-list--solstice card__will-animate" data-position="full-time" onclick="toggleForm(this.getAttribute('data-position'))" >get started</div>
       </div>
+    </div>
 
-         <div class="appl py-5 mt-5">
+          <!-- Nike Huarache -->
+    <div class="card card--huarache">
+      <div class="card__header card__header--huarache">
+        <div class="card__watermark" data-watermark="$$$"></div>
+
+        <img src="<%= asset_path 'favicon.ico' %>" alt="Nike" class="card__logo card__will-animate">
+
+        <span class="card__price card__will-animate">$10-$13</span>
+
+        <h1 class="card__title card__will-animate">summer/winter seasonal position</h1>
+        <span class="card__subtitle card__will-animate">
+          <table>
+          <tr><td>Weekly Pay</td></tr>
+          <tr><td>Great for students</td></tr>
+          <tr><td>Work summer or winter schedule</td></tr>
+          </table>
+        </span>
+        
+      </div>
+      
+      <div class="card__body">
+      <img src="<%= asset_path 'no-bg-elements/tools-removebg.png' %>" alt="Nike Huarache" class="card__image apply-image-3 card__will-animate">
+        <a class="card__wish-list card__wish-list--solstice card__will-animate " data-position="seasonal" onclick="toggleForm(this.getAttribute('data-position'))">Apply</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-placeholder ">
+    <div class="cards-placeholder__item"></div>
+    <div class="cards-placeholder__item"></div>
+    <div class="cards-placeholder__item"></div>
+  </div>
+  <div class="w-[95%] md:w-[50%] self-center mt-8 md:mt-16 rounded-2xl">
+  <div class="appl bg-blue-500 relative z-[2] rounded-2xl h-auto p-8 py-10 overflow-hidden bg shadow-2xl shadow-blue-600 px-20 text-gray-200">
                   <%# 
           to do 
           create admin user
@@ -112,62 +108,387 @@
           %>
           <%# alterante header for form %>
           <%# form_with(model:[ @user, project], local: true) do |f| %>
-      <%= form_for @candidate, url: '/careers#create' do |f| %>
-        <% if @candidate.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@candidate.errors.count, "error") %> prohibited this project from being created</h2>
+    <%= form_for @candidate, class:"border border-2 border-gray-400 text-gray-900", url: '/careers#create' do |f| %>
+      <% if @candidate.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@candidate.errors.count, "error") %> prohibited this project from being created</h2>
 
-            <ul>
-              <% @candidate.errors.each do |error|%>
-                <li><%= error.full_message %></li>
-              <%end%>
-            </ul>
-          </div>
-        <%end%>
-
-        <div class="field">
-          <%= f.label :position_applying_for %><br />
-          <%# f.select :position, autofocus: true, autocomplete: "position" %>
-          <%= f.select(:position, ['full-time', 'part-time', 'seasonal'], {}, { :class => 'position-field'}) %>
+          <ul>
+            <% @candidate.errors.each do |error|%>
+              <li><%= error.full_message %></li>
+            <%end%>
+          </ul>
         </div>
+      <%end%>
 
-      
-
-          <div class="field">
-          <%= f.label :name, "Your preferred Name:" %> <br />
-          <%= f.text_field :name, autocomplete: "name" %>
-        </div>
-
-
-        
-        <div class="field">
-          <%= f.label :phone_number %> <br />
-          <%= f.text_field :phone_number, autocomplete: "phone number"%>
-        </div>
-
-        <div class="field" >
-          <%= f.label :age, "What is your age:"%>
-          <%= f.number_field :age, value: '18' %>
-        </div>
-          <div class="field">
-          <%= f.label :current_address %>
-          <i >( street number, street name, apt # if applicable )</i>
-          <%= f.text_field :address, required: true, class: '' %>
-        </div>
-
-          <div class="field">
-          <%= f.label :address_zip_code%>
-          <%= f.number_field :zip_code, value:'71901' %>
-        </div>
-
-
-        <div class="actions mt-3">
-          <%= f.submit "Submit" %>
-        </div>
-      <% end %>
+      <div class="field">
+        <%= f.label :position_applying_for %><br />
+        <%# f.select :position, autofocus: true, autocomplete: "position" %>
+        <%= f.select(:position, ['full-time', 'part-time', 'seasonal'], {}, { :class => 'position-field block w-full px-4 py-3 h-[40px] border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl text-gray-900'}) %>
       </div>
 
-      <%= link_to 'Back', :back  %>
-      <%= javascript_pack_tag 'careers-new' %>
-</div>
+    
 
+        <div class="field">
+        <%#= f.label :name, "Your preferred Name:" %> <br />
+        <%= f.text_field :name, autocomplete: "name", placeholder:"your name", class:"text-gray-900 block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl" %>
+      </div>
+
+
+      
+      <div class="field">
+        <%#= f.label :phone_number %> <br />
+        <%= f.text_field :phone_number, autocomplete: "phone number", class:"block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl text-gray-900", placeholder: "phone number" %>
+      </div>
+
+      <div class="field" >
+        <%= f.label :age, "What is your age:"%>
+        <br>
+        <%= f.number_field :age, value: '18', class:"block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl text-gray-900" %>
+      </div>
+        <div class="field">
+        <%#= f.label :current_address %>
+        <i >( street number, street name, apt # if applicable )</i>
+        <%= f.text_field :address, required: true, class:"block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl text-gray-900", placeholder:"current address" %>
+      </div>
+
+        <div class="field">
+        <%= f.label :address_zip_code%>
+        <br>
+        <%= f.number_field :zip_code, value:'71901', class:"block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 focus:ring focus:ring-blue-500 focus:outline-none rounded-xl text-gray-900" %>
+      </div>
+
+
+      <div class="actions mt-3 flex justify-center">
+        <%= f.submit "Submit", class:"w-2/5 self-center px-3 py-4 font-medium text-gray-700 bg-gray-100 rounded-xl mt-6 text-gray-900" %>
+      </div>
+    <% end %>
+  </div>
+  </div>
+  <%= link_to 'Back', :back, class:"px-3 py-4 font-medium text-white bg-blue-600 rounded-xl w-[5rem] text-center mt-20"  %>
+</div>
+<% content_for :head do %>
+  <%= javascript_import_module_tag "custom/new" %>
+<% end %>
+<style>
+  html,
+  body {
+    /* height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Roboto", "Helvetica", sans-serif;
+
+    transition: background-color 0.2s;
+    will-change: background-color; */
+    /* border: 4px solid green; */
+  }
+
+  .inspired-by {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .wrapper {
+    /* border: 4px solid blue; */
+    /* background: gray; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    /* align-items: flex-end; */
+    /* justify-items: flex-end; */
+    /* position: relative; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* padding-left: 12rem; */
+    /* width: 100%; */
+    height: auto;
+    width: 100%;
+  }
+
+  .card {
+    /* border: 4px solid red; */
+    /* display: block; */
+    /* position: relative; */
+    /* top: 25px; */
+    height: auto;
+    margin: 0 auto;
+    width: 350px;
+
+    /* max-width: 400px; */
+
+    /* max-height: 600px; */
+    background-color: #fff;
+    border-radius: 15px;
+
+    box-shadow: 0 30 50 rgba(0, 0, 0, 0.2);
+    /* transform: translateX(-50%); */
+    transition: left 0.5s ease-out;
+    will-change: left;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .card--19 {
+    /* height: 600px; */
+    /* left: 50%; */
+  }
+
+  .card--solstice {
+    /* display: inline-block; */
+    /* top: 25px; */
+    /* left: 100%; */
+  }
+  .card--huarache {
+    /* left: 150%; */
+  }
+
+  .card__header {
+    /* border: 4px dashed pink; */
+    z-index: 8;
+    position: relative;
+    height: 28rem;
+    padding: 30px 30px 300px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    color: #fff;
+    text-align: initial;
+    overflow: hidden;
+  }
+
+  .card__header--19 {
+    background: #064CF8;
+    background: -webkit-linear-gradient(bottom, #064CF8, #0517E6);
+    background: -moz-linear-gradient(bottom, #064CF8, #0517E6);
+    background: linear-gradient(to top, #064CF8, #0517E6);
+  }
+
+  .card__header--solstice {
+    background: #6F7073;
+    background: -webkit-linear-gradient(bottom, #6F7073, #C3C3C3);
+    background: -moz-linear-gradient(bottom, #6F7073, #C3C3C3);
+    background: linear-gradient(to top, #6F7073, #C3C3C3);
+  }
+
+  .card__header--huarache {
+    background: #DE4345;
+    background: -webkit-linear-gradient(bottom, #DE4345, #FF0104);
+    background: -moz-linear-gradient(bottom, #DE4345, #FF0104);
+    background: linear-gradient(to top, #DE4345, #FF0104);
+  }
+
+  .card__watermark {
+    overflow: hidden;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    /* width: 100%; */
+  }
+
+  .card__watermark::after {
+    content: attr(data-watermark);
+    position: relative;
+    left: -20px;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 240px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .card__logo {
+    width: 50px;
+    height: auto;
+  }
+
+  .card__price {
+    float: right;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .card__title {
+    margin: 35px 0 20px;
+    font-size: 15px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .card__subtitle {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    height: auto;
+    /* border: 7px solid green; */
+    overflow: hidden;
+  }
+  .card__subtitle > table {
+    width: auto;
+    /* border: 4px dasehd blue; */
+  }
+  .card__body {
+    z-index: 8;
+    position: relative;
+    padding: 40px 30px 20px;
+    /* border: 2px dashed blue; */
+  }
+
+  .card__image {
+    z-index: 0;
+    position: absolute;
+    top: -200%;
+    /* bottom: 0; */
+    right: -30px;
+    width: 100%;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  @media screen and (min-width: 700px) {
+    .card__image {
+      /* border: 4px solid green; */
+      /* bottom: -30px; */
+      top: -160%;
+      /* width: 100%; */
+      /* left: 0; */
+    }
+  }
+
+  .card__wish-list {
+    z-index: 9;
+    display: block;
+    width: 50%;
+    margin: 0 auto 15px;
+    padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .card__wish-list:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  .card__wish-list--19 {
+    color: blue;
+    border-color: blue;
+  }
+
+  .card__wish-list--solstice {
+    color: blue;
+    border-color: blue;
+  }
+
+  .card__wish-list--huarache {
+    color: blue;
+    border-color: blue;
+  }
+
+  .card__category {
+    display: block;
+    font-size: 12px;
+    color: #aeaeae;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .card__will-animate {
+    will-change: transform;
+  }
+
+  .cards-placeholder {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .cards-placeholder__item {
+    opacity: 0.3;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #fff;
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+
+    transition: opacity 0.2s;
+    will-change: opacity;
+  }
+
+  .cards-placeholder__item--active {
+    opacity: 1;
+  }
+  .wrapper {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  @media screen and (max-width: 700px) {
+    .wrapper {
+      flex-direction: column;
+    }
+    .wrapper .card {
+      margin-top: 3rem;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .wrapper {
+      flex-direction: row;
+    }
+    .wrapper .card--huarache {
+      margin-top: 2.5rem;
+    }
+  }
+  .apply-image-1 {
+    width: 80%;
+    right: -20px;
+    height: auto;
+  }
+  .apply-image-2 {
+    width: 80%;
+    right: 10px;
+    height: auto;
+  }
+  .apply-image-3 {
+    width: 80%;
+    right: -20px;
+    height: auto;
+  }
+  .appl {
+    display: none;
+    opacity: 0;
+    font-family: "Lato", sans-serif;
+    /* border-radius: 0.25em; */
+    /* box-shadow: 0 2px 6px -2px #222; */
+    /* top: -20rem; */
+    /* overflow-y: hidden; */
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  }
+
+  .open {
+    display: block;
+    opacity: 1;
+    top: 0.5rem;
+  }
+</style>

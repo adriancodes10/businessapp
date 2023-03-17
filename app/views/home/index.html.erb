@@ -2,7 +2,7 @@
 
 
 
-<div class="md:pl-[20%] lg:pl-[15%]  bg-gray-400 dark:bg-slate-900 pt-16 px-6 flex flex-col justify-center overflow-hidden">
+<div class="md:pl-[20%] lg:pl-[15%] pt-16 px-6 flex flex-col justify-center overflow-hidden">
     <% if !user_signed_in? %>
         <%# <span class="top-buttons position-absolute " style="z-index: 30;">  %>
       <%# link_to 'Sign in', new_user_session_path %>
@@ -54,11 +54,11 @@
       <h1 class=" hidden"></h1>
       <br>
       <h1 class="hidden" data-controller="hello" data-action="click->hello#handleClick "></h1>
-      <h2  class="font-bold text-4xl bg-gradient-to-r from-slate-300 to-slate-700 bg-clip-text text-transparent text-center border-gray-900 w-[100%]" >
+      <h2  class="font-bold text-4xl bg-gradient-to-r  dark:from-slate-300 dark:to-slate-700 bg-clip-text from-slate-400 to-slate-900 text-center border-gray-900 w-[100%]">
         Commercial <span class="text-blue-600">+</span> Residential 
       </h2>
       <br>
-      <h1 class="font-bolder text-gray-100 dark:text-gray-200 text-3xl text-center mt-2"><span class=" text-red-700 font-bold">Poured</span> <span class="text-gray-500  font-bold">Concrete Foundation</span> <span class="text-gray-800  font-bold dark:text-blue-600">Retaining Walls</span>
+      <h1 class="font-bolder text-3xl text-center mt-2"><span class="font-bold text-red-500">Poured</span> <span class="text-gray-500  font-bold">Concrete Foundation</span> <span class="  font-bold text-blue-600">Retaining Walls</span>
       </h1> 
       <%= link_to 'Schedule a Project', new_dashboard_url, class:'animate-bounce1 self-center w-[12rem] text-center mt-10 mb-10 py-2 px-4 bg-blue-600 text-blue-300 font-semibold border border-white-500 rounded-lg hover:bg-blue-700 hover:text-blue-200 hover:border-white-700 transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0', style:'' %>
     </div>
@@ -177,7 +177,6 @@
 
 
     <div class="round-card first hidden" style="">
-    
       <span class="text" style="">
       <h3 class='card-title' style="">Reinforced Concrete Retaining Walls</h3>
       <h5>Steel Rebar Reinforcement </h5>
@@ -187,25 +186,22 @@
       <h5>Poured in one day</h5>
       <h5>Low maintainance </h5>
       <h5>Fire & Water Resistant  </h5>
-      
-        <%= link_to 'Schedule a Project', new_dashboard_url, class:'card-button' %>
-      
-    
-    </span>
-  </div>
+      <%= link_to 'Schedule a Project', new_dashboard_url, class:'card-button' %>
+      </span>
+    </div>
   
-  <div class="w-[105%] md:w-[50%] max-w-[500px] self-center md:self-end my-10">   
-    <%= image_tag("no-bg-elements/framework-red-basement-front-top-nobg.png",alt: "formed walls foundation, basement, house" , class:"h-[20rem] m-auto relative z-4", :style => "") %>   
+  <div class="w-[105%] lg:w-[50%] max-w-[500px] self-center md:self-end my-10">   
+    <%= image_tag("no-bg-elements/framework-red-basement-front-top-nobg.png",alt: "formed walls foundation, basement, house" , class:"h-[20rem] m-auto relative", :style => "top: 3rem;z-index:1;") %>   
     <div class="relative px-4 -mt-12 ">
-      <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-2xl shadow-slate-900">
+      <div class="bgunset bg-red-500 p-6 rounded-3xl shadow-2xl shadow-slate-900 text-slate-200 dark:text-gray-300  relative pt-16" style="background: brown;z-index: 0;">
         <div class="flex flex-col items-baseline text-center">
           <span class="hidden bg-teal-200 text-teal-800 text-xs px-2 rounded-full  uppercase font-semibold tracking-wide">
             New
           </span>
-          <div class="ml-2 inline-block text-gray-600 uppercase text-xs font-semibold tracking-wider">
-        Foundation  &bull;  Basement Walls
+          <div class="ml-2 inline-block text-slate-200 dark:text-slate-600 uppercase text-xs font-semibold tracking-wider">
+        Foundation Walls  &bull;  Basement Walls
           </div>  
-          <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+          <div class="ml-2 text-slate-200 dark:text-slate-900 uppercase text-xs font-semibold tracking-wider">
           Parking Structure Walls  &bull;  Lake Seawalls &bull; & more
           </div>  
         </div>
@@ -218,31 +214,31 @@
         <span class="text-gray-600 text-sm">   /wk</span>
       </div>
       <div class="mt-4 flex justify-center">
-          <%= link_to 'Project Gallery', home_gallery_url, class: 'card-button  bg-red-700 text-slate-200 rounded-md py-2 px-2'%>
+          <%= link_to 'Project Gallery', home_gallery_url, class: 'card-button  text-slate-200 rounded-md py-2 px-2', style:"background-color: red;"%>
         <span class="hidden text-teal-600 text-md md:text-lg font-semibold">4/5 ratings </span>
         <span class="hidden text-sm text-gray-600">(based on 234 ratings)</span>
       </div>  
       </div>
     </div>
   </div>
-  <div class="w-[105%] md:w-[50%] max-w-[500px] self-center md:self-start  my-10 md:-mt-32">   
+  <div class="w-[105%] lg:w-[50%] max-w-[500px] self-center md:self-start  my-10 md:mt-8 lg:-mt-16">   
     <%= image_tag("no-bg-elements/cgi-blue-standing-nobg.png",alt: "formed walls foundation, basement, house" , class:"h-[20rem] m-auto relative z-[4]", :style => "") %>   
     <div class="relative px-4 -mt-12">
-      <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-2xl shadow-slate-900">
+      <div class="bg-blue-500 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-400 via-blue-600 to-blue-600 dark:bg-slate-800 p-6 rounded-3xl shadow-2xl shadow-slate-900">
         <div class="flex flex-col items-baseline text-center">
           <span class="hidden bg-teal-200 text-teal-800 text-xs px-2 rounded-full  uppercase font-semibold tracking-wide">
             New
           </span>
-          <div class="ml-2 inline-block text-gray-600 uppercase text-xs font-semibold tracking-wider">
+          <div class="ml-2 inline-block text-gray-200 dark:text-gray-600 uppercase text-xs font-semibold tracking-wider">
         Full 2”x2” crossmember support angle  &bull; strongest steel
           </div>  
-          <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+          <div class="ml-2 text-gray-200 dark:text-gray-600 uppercase text-xs font-semibold tracking-wider">
           100% sealed birch plywood &bull;  1,000 psf load-rated system 
           </div>  
         </div>
         
-        <h4 class="mt-4 text-xl text-center font-semibold uppercase leading-tight">Concrete Steel Forms / Panels</h4>
-        <h4 class="mt-4 text-gray-400 text-lg text-center font-semibold uppercase leading-tight">Industry Leading Performance</h4>
+        <h4 class="mt-4 text-xl text-center font-semibold text-gray-100 dark:text-gray-400 uppercase leading-tight">Concrete Steel Forms / Panels</h4>
+        <h4 class="mt-4 text-gray-300 dark:text-gray-400 text-lg text-center font-semibold uppercase leading-tight">Industry Leading Performance</h4>
     
       <div class="hidden mt-1">
         $1800

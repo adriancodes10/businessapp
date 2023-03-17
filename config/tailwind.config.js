@@ -60,6 +60,10 @@ module.exports = {
     require('@tailwindcss/typography'),
     plugin(function ({ addComponents }) {
       addComponents({
+        '.bgunset': {
+          backgroundColor: 'unset',
+          border: '2px solid green',
+        },
         '.bubble': {
           /* display: none; */
           zIndex: '1',
